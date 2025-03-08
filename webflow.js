@@ -10,8 +10,7 @@ if (window.location.pathname === '/doodeli-hoodeli-akindurak') {
   const targetDiv = document.querySelector('.div-block-392');
   targetDiv.parentNode.insertBefore(iframe, targetDiv);
 
-
-  // Custom styles for the iframe
+// Custom styles for the iframe
   const style = document.createElement('style');
   style.textContent = `
     body {
@@ -24,17 +23,20 @@ if (window.location.pathname === '/doodeli-hoodeli-akindurak') {
         z-index: 7;
         position: relative;
         margin-top: -100px;
-        height: 130vh;
+        height: 100vh;
         width: 100vw;
         border: none;
         outline: none;
         box-shadow: none;
         border-radius: 0;
+        top: 0;
     }
     .nav-men {
         position: relative;
+        height: 100px !important;
     }
     .div-block-392 {
+    display: none;
         margin-top: 0px;
     }
     .men-__outer__wrapper {
@@ -42,17 +44,23 @@ if (window.location.pathname === '/doodeli-hoodeli-akindurak') {
     }
     #hire-me-block {
         top: 0;
+        margin-top: 3rem;
     }
+    
     /*.mode-toggle {
         display: none;
     }*/
     @media (max-width: 768px) {
         iframe {
-            margin-top: 100px;
-            height: 100vh;
+            margin-top: 0px;
+            height: 80vh;
         }
         .div-block-392 {
-            margin-top: 100px;
+            margin-top: 0px;
+        }
+        #hire-me-block {
+            top: 0;
+            margin-top: 0rem;
         }
     }
   `;
